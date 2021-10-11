@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
       }
     }
   
-    //flip your card
+    //flip your cards
     function flipCard() {
       let cardId = this.getAttribute('data-id')
       cardsChosen.push(cardArray[cardId].name)
