@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.setAttribute('class', 'sizeCards');
       card.setAttribute(
         'src',
-        'https://images.unsplash.com/photo-1590272456521-1bbe160a18ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=627&q=80'
+        'https://images.unsplash.com/photo-1552761831-7ef8ec07adbd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1002&q=80'
       );
       card.setAttribute('data-id', i);
       card.addEventListener('click', flipCard);
