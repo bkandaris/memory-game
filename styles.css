@@ -55,12 +55,12 @@ html {
 
 @media screen and (max-width: 900px) {
   .button {
-    bottom: 15%;
+    bottom: 25%;
   }
 }
 
 @media screen and (max-width: 600px) {
   .button {
-    bottom: 10%;
+    bottom: 20%;
   }
 }
