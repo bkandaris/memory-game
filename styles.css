@@ -1,3 +1,15 @@
+html {
+  background-color: lightblue;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -5,8 +17,50 @@
   width: 600px;
 }
 
+@media screen and (max-width: 600px) {
+  .grid {
+    height: 200px;
+    width: 400px;
+  }
+}
+
 .sizeCards {
-  height: 198px;
-  width: 198px;
+  object-fit: cover;
+  width: 100%;
+  height: 96px;
+  width: 196px;
   border: 1px solid red;
+}
+
+@media screen and (max-width: 600px) {
+  .sizeCards {
+    height: 100px;
+    width: 130px;
+  }
+}
+
+.button {
+  position: fixed;
+  width: 175px;
+  height: 80px;
+  background-color: #fff;
+  padding: 10px;
+  border: 5px solid #ccc;
+  z-index: 200;
+  margin: 5% auto;
+  left: 0;
+  right: 0;
+  bottom: 20%;
+}
+
+@media screen and (max-width: 900px) {
+  .button {
+    bottom: 15%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .button {
+    bottom: 10%;
+  }
 }

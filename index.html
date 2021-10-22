@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <script src="app.js"></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Memory game</title>
-</head>
-<body>
-    <h3>Score:<span id="result"></span></h3>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Memory Game</h1>
+      <h3>Matches: <span id="result"></span></h3>
+      <div class="grid"></div>
 
-    <div class="grid">
-
+      <button class="button" onClick="window.location.reload();">
+        Play Again
+      </button>
     </div>
-</body>
+  </body>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="script.js"></script>
 </html>
