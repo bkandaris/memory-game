@@ -70,7 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < cardArray.length; i++) {
       const card = document.createElement('img');
       card.setAttribute('class', 'sizeCards');
-      card.setAttribute('src', './images/Blank.png');
+      card.setAttribute(
+        'src',
+        'https://images.unsplash.com/photo-1590272456521-1bbe160a18ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=627&q=80'
+      );
       card.setAttribute('data-id', i);
       card.addEventListener('click', flipCard);
       grid.appendChild(card);
@@ -85,8 +88,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const optionTwoId = cardsChosenId[1];
 
     if (optionOneId == optionTwoId) {
-      cards[optionOneId].setAttribute('src', './images/Blank.png');
-      cards[optionTwoId].setAttribute('src', './images/Blank.png');
+      cards[optionOneId].setAttribute(
+        'src',
+        'https://images.unsplash.com/photo-1552761831-7ef8ec07adbd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1002&q=80'
+      );
+      cards[optionTwoId].setAttribute(
+        'src',
+        'https://images.unsplash.com/photo-1552761831-7ef8ec07adbd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1002&q=80'
+      );
       // alerting the user that they have made an error
       swal({
         title: 'Ut oh',
@@ -102,15 +111,27 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       // if a match is found, we change the image on the board to show that the user has already selected these cards then remove the event listener so that the cards cannot be clicked anymore
       // Then push the the cardChosen to the cardsWon array to keep track if the game has been finished
-      cards[optionOneId].setAttribute('src', './images/Back.png');
-      cards[optionTwoId].setAttribute('src', './images/Back.png');
+      cards[optionOneId].setAttribute(
+        'src',
+        'https://images.unsplash.com/photo-1590272456521-1bbe160a18ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=627&q=80'
+      );
+      cards[optionTwoId].setAttribute(
+        'src',
+        'https://images.unsplash.com/photo-1590272456521-1bbe160a18ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=627&q=80'
+      );
       cards[optionOneId].removeEventListener('click', flipCard);
       cards[optionTwoId].removeEventListener('click', flipCard);
       cardsWon.push(cardsChosen);
       // if cards do not match, we reset them to 'blank' and alert the user that they did not select two matching cards
     } else {
-      cards[optionOneId].setAttribute('src', './images/Blank.png');
-      cards[optionTwoId].setAttribute('src', './images/Blank.png');
+      cards[optionOneId].setAttribute(
+        'src',
+        'https://images.unsplash.com/photo-1552761831-7ef8ec07adbd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1002&q=80'
+      );
+      cards[optionTwoId].setAttribute(
+        'src',
+        'https://images.unsplash.com/photo-1552761831-7ef8ec07adbd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1002&q=80'
+      );
       swal({
         title: 'Oops!',
         text: 'Try again!',
